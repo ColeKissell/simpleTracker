@@ -1,11 +1,11 @@
 <h3>Top Items</h3>
 <div class="grid grid-pad">
   <a *ngFor="let item of items" class="col-1-4"
-      routerLink="/detail/{{item.name}}">
+      routerLink="/detail/{{item._id}}">
     <div class="module hero">
       <h4>{{item.name}}</h4>
-      <p>{{item.description}}</p>
     </div>
   </a>
-  <br/>
 </div>
+
+<app-item-search></app-item-search>

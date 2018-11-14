@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule }    from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,9 @@ import { ItemComponent } from './item/item.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ItemSearchComponent } from './item-search/item-search.component';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryDataService }  from './in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ItemComponent,
     ItemDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    ItemSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
